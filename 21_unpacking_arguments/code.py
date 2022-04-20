@@ -1,9 +1,8 @@
 def multiply(*args):
-    print(args)
     total = 1
     for arg in args:
         total = total * arg
-
+    
     return total
 
 
@@ -15,11 +14,8 @@ def add(x, y):
     return x + y
 
 
-nums = [3, 5]
-print(add(*nums))  # instead of add(nums[0], nums[1])
-
-# -- Uses with keyword arguments --
-# Double asterisk packs or unpacks keyword arguments
+nums = [3, 10]
+print(add(*nums))
 
 
 def add(x, y):
@@ -30,15 +26,12 @@ nums = {"x": 15, "y": 25}
 
 print(add(**nums))
 
-# -- Forced named parameter --
+# def sum(*args):
+#     total = 0
+#     for arg in args:
+#         total = total + arg
 
-
-def multiply(*args):
-    total = 1
-    for arg in args:
-        total = total * arg
-
-    return total
+#     return total
 
 
 def apply(*args, operator):
@@ -51,4 +44,3 @@ def apply(*args, operator):
 
 
 print(apply(1, 3, 6, 7, operator="+"))
-print(apply(1, 3, 5, "+"))  # Error
